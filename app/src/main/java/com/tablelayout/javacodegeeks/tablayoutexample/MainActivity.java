@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
+        //create tabs and add to layout
         tabLayout.addTab(tabLayout.newTab().setText("First Tab"));
         tabLayout.addTab(tabLayout.newTab().setText("Second Tab"));
      //   tabLayout.addTab(tabLayout.newTab().setText("Third Tab"));
@@ -22,10 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
+        //create adapter and add to ViewPager
         final PagerAdapter adapter = new PagerAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
+
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
