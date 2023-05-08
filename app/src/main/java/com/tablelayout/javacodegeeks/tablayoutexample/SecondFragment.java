@@ -30,15 +30,8 @@ public class SecondFragment extends Fragment {
         text = (EditText) view.findViewById(R.id.EditText01);
         webView = (WebView) view.findViewById(R.id.web);
 
-        //intercept URL loading and load in widget
-        webView.setWebViewClient(new WebViewClient() {
-
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-
-        });
+        //ensure clicking links keep opening in the widget rather than opening the browser.
+        webView.setWebViewClient(new WebViewClient());
 
         //set listeners for web tab
         button.setOnClickListener(new View.OnClickListener() {
