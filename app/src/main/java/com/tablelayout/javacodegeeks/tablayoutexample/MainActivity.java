@@ -19,8 +19,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Second Tab"));
      //   tabLayout.addTab(tabLayout.newTab().setText("Third Tab"));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.duke_waving));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+        //set gravity for tabs
+        tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
+
+        //widget to allow page flipping
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
         //create adapter and add to ViewPager
@@ -48,7 +51,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
 
 }
