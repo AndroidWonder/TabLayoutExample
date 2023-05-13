@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
-        //create tabs and add to layout; tabs may have text or an icon
+        //create tabs and add to layout; tabs may have text or an icon or both
         tabLayout.addTab(tabLayout.newTab().setText("First Tab"));
         tabLayout.addTab(tabLayout.newTab().setText("Second Tab"));
-     //   tabLayout.addTab(tabLayout.newTab().setText("Third Tab"));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.duke_waving));
+        tabLayout.addTab(tabLayout.newTab().setText("Third Tab"));
+       // tabLayout.addTab(tabLayout.newTab().setText("Third Tab").setIcon(R.drawable.duke_waving));
 
         //set gravity for tabs
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
